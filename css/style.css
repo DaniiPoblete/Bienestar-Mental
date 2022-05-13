@@ -1,4 +1,4 @@
-* {
+*, ul {
 	margin: 0;
 	padding: 0;
 }
@@ -45,11 +45,15 @@ a, a:hover {
 
 h1 {
 	font-size: 2.2rem;
-	font-weight: 500;
 }
 
 h2 {
 	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.2rem;
 	font-weight: 600;
 }
 
@@ -60,9 +64,8 @@ p {
 	margin-bottom: 1rem;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
+img {
+	max-width: 100%;
 }
 
 /* Header
@@ -122,25 +125,12 @@ header nav ul a:hover::before {
 /* Banner Section
  ========================================================================== */
 .bannerSection {
-	display: flex;
-	align-items: center;
-	padding: 2rem 3rem;
-	text-align: center;
+	padding: 1rem 0 2rem;
 	background-color: #fef7e6;
-	gap: 2rem;
 }
 
-.bannerSection__content {
-	flex: 1 1 calc(60% - 2rem);
-}
-
-.bannerSection__image {
-	flex: 1 1 40%;
-}
-
-.bannerSection__image img {
-	max-width: 100%;
-	max-height: 25rem;
+.bannerSection img {
+	max-height: 25rem
 }
 
 /* Search
@@ -255,12 +245,6 @@ header nav ul a:hover::before {
 
 /* Articles
  ========================================================================== */
-.articles {
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: repeat(2, 1fr);
-}
-
 .articles .horizontalCard {
 	background-color: #fff6ee;
 }
@@ -302,12 +286,6 @@ footer {
 
 /* Healthy Life
 ========================================================================== */
-.advices {
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: repeat(3, 1fr);
-}
-
 .advices__advice {
 	padding: 2rem;
 	text-align: center;
@@ -326,12 +304,11 @@ footer {
 
 /* Mental Health
 ========================================================================== */
-.mentalDisorder {
-	margin-bottom: 2rem;
+.mentalDisorders .horizontalCard {
 	background-color: #eaf9fb;
 }
 
-.mentalDisorder:nth-of-type(2n) .horizontalCard__image {
+.mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
 	order: 1;
 }
 
@@ -363,12 +340,6 @@ footer {
 .getHelp__phone i,
 .getHelp__phone span {
 	color: #ffffff;
-}
-
-.contacts {
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: repeat(3, 1fr);
 }
 
 .contacts__contact {
@@ -411,14 +382,6 @@ footer {
 	.cardSection {
 		max-width: 36rem;
 	}
-
-	.articles {
-		grid-template-columns: 1fr;
-	}
-
-	.advices, .contacts {
-		grid-template-columns: repeat(2, 1fr);
-	}
 }
 
 @media (max-width: 767px) {
@@ -436,9 +399,7 @@ footer {
 	}
 
 	.bannerSection {
-		flex-direction: column;
-		padding: 2rem 1rem;
-		gap: 1rem;
+		padding: 1rem 0;
 	}
 
 	.search form {
@@ -471,21 +432,7 @@ footer {
 		gap: 1rem;
 	}
 
-	.advices, .contacts {
-		grid-template-columns: 1fr;
-	}
-
-	.mentalDisorder:nth-of-type(2n) .horizontalCard__image {
+	.mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
 		order: unset;
-	}
-
-	.articles,
-	.advices,
-	.contacts {
-		gap: 1rem;
-	}
-
-	.mentalDisorder {
-		margin-bottom: 1rem;
 	}
 }
