@@ -1,4 +1,4 @@
-*, ul {
+*, ul { /*ul para pisar reboot de bootstrap*/
 	margin: 0;
 	padding: 0;
 }
@@ -125,7 +125,6 @@ header nav ul a:hover::before {
 /* Banner Section
  ========================================================================== */
 .bannerSection {
-	padding: 1rem 0 2rem;
 	background-color: #fef7e6;
 }
 
@@ -207,12 +206,6 @@ header nav ul a:hover::before {
  ========================================================================== */
 .help {
 	background-color: #eaf9fb;
-}
-
-/* Main Section
- ========================================================================== */
-.mainSection {
-	margin: 3rem;
 }
 
 /* Horizontal Card
@@ -398,20 +391,12 @@ footer {
 		width: 2.2rem;
 	}
 
-	.bannerSection {
-		padding: 1rem 0;
-	}
-
 	.search form {
 		margin: 2rem auto;
 	}
 
 	.cardSection {
 		max-width: unset;
-		margin: 1rem;
-	}
-
-	.mainSection {
 		margin: 1rem;
 	}
 
