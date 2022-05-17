@@ -45,6 +45,10 @@ a, a:hover {
 	box-shadow: 5px 5px 15px 5px #00000014;
 }
 
+.button i {
+	margin-right: 0.3rem;
+}
+
 h2 {
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -279,6 +283,7 @@ footer {
 /* Healthy Life
 ========================================================================== */
 .advices__advice {
+	height: 100%;
 	padding: 2rem;
 	text-align: center;
 	border-radius: 1.25rem;
@@ -307,6 +312,7 @@ footer {
 /* Helpful Contacts
 ========================================================================== */
 .getHelp {
+	font-size: 1.17rem;
 	background-color: #fbe9f3;
 }
 
@@ -315,44 +321,23 @@ footer {
 	font-weight: 700;
 }
 
-.getHelp p,
-.getHelp__phone {
-	font-size: 1.17rem;
-}
-
-.getHelp__phone {
-	width: fit-content;
-	margin: auto;
-	padding: 0.3rem 0.6rem;
-	border-radius: 1.25rem;
-	background-color: #a13b6d;
-	box-shadow: 5px 5px 15px 5px #00000014;
-}
-
-.getHelp__phone i,
-.getHelp__phone span {
+.getHelp .button {
 	color: #ffffff;
+	background-color: #a13b6d;
 }
 
 .contacts__contact {
+	height: 100%;
 	padding: 2rem;
 	text-align: center;
 	border-radius: 1.25rem;
 	background-color: #fff6ee;
 }
 
-.contacts__contact i {
-	margin-bottom: 1rem;
-}
-
-.contact__phone {
-	width: fit-content;
-	margin: auto;
-	padding: 0.313rem 0.625rem;
+.contacts__contact .button {
+	min-width: 6rem;
 	color: #ffffff;
-	border-radius: 1.25rem;
 	background-color: #d7bca7;
-	box-shadow: 5px 5px 15px 5px #00000014;
 }
 
 .accordion-button:not(.collapsed) {
@@ -362,7 +347,6 @@ footer {
 }
 
 .accordion-button:focus {
-	/*box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);*/
 	box-shadow: unset;
 }
 
@@ -443,6 +427,10 @@ footer {
 
 	.newsletter input {
 		width: 100%;
+	}
+
+	.newsletter label {
+		display: unset;
 	}
 
 	footer {
