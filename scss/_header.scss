@@ -1,0 +1,70 @@
+/* Header
+ ========================================================================== */
+header {
+  padding: 0.5rem 1rem;
+  background-color: #fef7e6;
+  @media screen and (max-width: 767px) {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+      gap: 0.5rem;
+    }
+
+    img {
+      width: 3rem;
+      @media screen and (max-width: 767px) {
+        width: 2.2rem;
+      }
+    }
+  }
+
+  nav ul {
+    gap: 0.5rem;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    a {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        transition: all 0.3s;
+        transform: scale(0, 1);
+        opacity: 0;
+        border: 0 solid #e7b0af;
+        border-bottom-width: 1px;
+      }
+
+      &:hover::before {
+        transform: scale(1, 1);
+        opacity: 1;
+        @media screen and (max-width: 991px) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .navbar-light .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
