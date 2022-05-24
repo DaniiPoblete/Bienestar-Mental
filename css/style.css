@@ -25,6 +25,26 @@
     -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
     box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35); } }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem; }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem; }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem; }
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem; }
+
 /* Header
  ========================================================================== */
 header {
@@ -49,6 +69,8 @@ header {
         header .navbar-brand img {
           width: 2.2rem; } }
   header nav ul {
+    margin: 0;
+    padding: 0;
     gap: 0.5rem; }
     @media screen and (max-width: 991px) {
       header nav ul {
@@ -102,6 +124,9 @@ header {
 .search form {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  gap: 0;
   max-width: 35rem;
   margin: 3rem auto;
   padding: 0 0.8rem;
@@ -130,16 +155,19 @@ header {
   .search__quickSearch p {
     margin-bottom: 0; }
   .search__quickSearch ul {
+    margin: 0;
+    padding: 0;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    list-style: none;
-    gap: 0.5rem; }
+    gap: 0.5rem;
+    list-style: none; }
     .search__quickSearch ul li {
-      padding: 0.3rem 0.6rem;
       color: #fff;
-      border-radius: 1.25rem;
-      background-color: #e7b0af; }
+      background-color: #e7b0af;
+      padding: 0.3rem 0.6rem;
+      border-radius: 1.25rem; }
       .search__quickSearch ul li:hover {
         -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
@@ -148,10 +176,7 @@ header {
  ========================================================================== */
 .cardSection {
   max-width: 38rem;
-  margin: 2rem auto;
-  padding: 3rem;
-  text-align: center;
-  border-radius: 1.25rem; }
+  margin: 2rem auto; }
   @media screen and (max-width: 991px) {
     .cardSection {
       max-width: 36rem; } }
@@ -162,39 +187,30 @@ header {
 
 /* Horizontal Card
  ========================================================================== */
-.horizontalCard {
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 1.25rem;
-  gap: 2rem; }
-  @media screen and (max-width: 767px) {
-    .horizontalCard {
-      flex-direction: column; } }
-  .horizontalCard__image {
-    flex: 1 1 40%; }
-    .horizontalCard__image img {
-      max-height: 14rem; }
-      @media screen and (max-width: 767px) {
-        .horizontalCard__image img {
-          width: 100%;
-          max-height: 10rem; } }
-  .horizontalCard__content {
-    flex: 1 1 calc(60% - 2rem); }
-    .horizontalCard__content p {
-      text-align: justify; }
+.horizontalCard__image {
+  flex: 1 1 40%; }
+  .horizontalCard__image img {
+    max-height: 14rem; }
+    @media screen and (max-width: 767px) {
+      .horizontalCard__image img {
+        max-height: 10rem; } }
+
+.horizontalCard__content {
+  flex: 1 1 calc(60% - 2rem); }
+  .horizontalCard__content p {
+    text-align: justify; }
 
 /* Footer
  ========================================================================== */
 .footer {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 2rem;
   text-align: center;
-  background-color: #efe6f5;
-  gap: 1rem; }
+  background-color: #efe6f5; }
   @media screen and (max-width: 767px) {
     .footer {
       flex-direction: column; } }
@@ -206,9 +222,7 @@ header {
     font-size: 2.5rem;
     padding: 0.3rem; }
 
-*,
-header ul,
-.search ul {
+* {
   margin: 0;
   padding: 0; }
 
@@ -224,6 +238,9 @@ body {
   font-size: 1rem;
   line-height: normal;
   color: #332c27; }
+
+img {
+  max-width: 100%; }
 
 input,
 select,
@@ -254,38 +271,42 @@ a:hover {
 .button i {
   margin-right: 0.3rem; }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600; }
-
-h3 {
-  font-size: 1.2rem;
-  font-weight: 600; }
-
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 1rem; }
-
-img {
-  max-width: 100%; }
-
 /* Help
  ========================================================================== */
 .help {
-  background-color: #eaf9fb; }
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background-color: #eaf9fb;
+  height: 100%; }
 
 /* Articles
  ========================================================================== */
 .articles .horizontalCard {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  gap: 2rem;
+  flex-direction: row;
   height: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
   background-color: #fff6ee; }
+  @media screen and (max-width: 767px) {
+    .articles .horizontalCard {
+      flex-direction: column;
+      align-items: stretch; } }
 
 /* Newsletter
  ========================================================================== */
 .newsletter {
-  background-color: #eafbf0; }
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background-color: #eafbf0;
+  height: 100%; }
   .newsletter input {
     width: 80%;
     margin-bottom: 1rem; }
@@ -299,17 +320,25 @@ img {
 /* Healthy Life
 ========================================================================== */
 .advices__advice {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  gap: 2rem;
+  flex-direction: column;
   height: 100%;
   padding: 2rem;
   text-align: center;
   border-radius: 1.25rem;
   background-color: #f4fbf5; }
+  @media screen and (max-width: 767px) {
+    .advices__advice {
+      flex-direction: column;
+      align-items: stretch; } }
   .advices__advice img {
-    max-height: 14rem;
-    margin-bottom: 1rem; }
+    max-height: 14rem; }
     @media screen and (max-width: 767px) {
       .advices__advice img {
-        width: 100%;
         max-height: 10rem; } }
   .advices__advice p {
     text-align: justify; }
@@ -317,7 +346,21 @@ img {
 /* Mental Health
 ========================================================================== */
 .mentalDisorders .horizontalCard {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  gap: 2rem;
+  flex-direction: row;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
   background-color: #eaf9fb; }
+  @media screen and (max-width: 767px) {
+    .mentalDisorders .horizontalCard {
+      flex-direction: column;
+      align-items: stretch; } }
 
 .mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
   order: 1; }
@@ -328,22 +371,28 @@ img {
 /* Helpful Contacts
 ========================================================================== */
 .getHelp {
-  font-size: 1.17rem;
-  background-color: #fbe9f3; }
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background-color: #fbe9f3;
+  height: 100%; }
   .getHelp h1 {
     font-size: 1.5rem;
     font-weight: 700; }
+  .getHelp p {
+    font-size: 1.18rem; }
   .getHelp .button {
     color: #fff;
-    background-color: #a13b6d; }
+    background-color: #a13b6d;
+    font-size: 1.18rem; }
 
 .contacts__contact {
-  height: 100%;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
   border-radius: 1.25rem;
-  background-color: #e5e6f5; }
+  background-color: #e5e6f5;
+  height: 100%; }
   .contacts__contact .button {
-    min-width: 6rem;
     color: #fff;
-    background-color: #8083ac; }
+    background-color: #8083ac;
+    min-width: 6rem; }

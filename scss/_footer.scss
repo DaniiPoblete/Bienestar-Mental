@@ -1,13 +1,10 @@
 /* Footer
  ========================================================================== */
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(center, nowrap, space-between, 1rem);
   padding: 1rem 2rem;
   text-align: center;
   background-color: #efe6f5;
-  gap: 1rem;
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }

@@ -1,0 +1,48 @@
+$sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
+@each $key, $size, $weight in $sizes {
+  #{$key} {
+    font-size: $size;
+    font-weight: $weight;
+    margin-bottom: 1rem;
+  }
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex($align-items, $flex-wrap, $justify-content, $gap) {
+  display: flex;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+@mixin flex-card($background-color, $flex-direction) {
+  @include flex(center, nowrap, normal, 2rem);
+  flex-direction: $flex-direction;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  background-color: $background-color;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@mixin button-card($background-color, $padding) {
+  text-align: center;
+  padding: $padding;
+  border-radius: 1.25rem;
+  background-color: $background-color;
+  height: 100%;
+}
+
+@mixin color-button($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+}

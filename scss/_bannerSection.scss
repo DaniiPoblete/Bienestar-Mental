@@ -24,8 +24,7 @@
   }
 
   form {
-    display: flex;
-    align-items: center;
+    @include flex(center, nowrap, normal, 0);
     max-width: 35rem;
     margin: 3rem auto;
     padding: 0 0.8rem;
@@ -51,28 +50,21 @@
   }
 
   &__quickSearch {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    @include flex(center, wrap, center, 1rem);
 
     p {
       margin-bottom: 0;
     }
 
     ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      @include reset;
+      @include flex(center, wrap, center, 0.5rem);
       list-style: none;
-      gap: 0.5rem;
 
       li {
+        @include color-button(#fff, #e7b0af);
         padding: 0.3rem 0.6rem;
-        color: #fff;
         border-radius: 1.25rem;
-        background-color: #e7b0af;
 
         &:hover {
           -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

@@ -1,15 +1,13 @@
 @import "animations";
+@import "helpers";
 @import "header";
 @import "bannerSection";
 @import "cardSection";
 @import "horizontalCard";
 @import "footer";
 
-*,
-header ul, /*pisa reboot de bootstrap*/
-.search ul {
-  margin: 0;
-  padding: 0;
+* {
+  @include reset;
 }
 
 *,
@@ -25,6 +23,10 @@ body {
   font-size: 1rem;
   line-height: normal;
   color: #332c27;
+}
+
+img {
+  max-width: 100%;
 }
 
 input,
@@ -63,46 +65,24 @@ a:hover {
   }
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 1rem;
-}
-
-img {
-  max-width: 100%;
-}
-
 /* Help
  ========================================================================== */
 .help {
-  background-color: #eaf9fb;
+  @include button-card(#eaf9fb, 3rem);
 }
 
 /* Articles
  ========================================================================== */
 .articles {
   .horizontalCard {
-    height: 100%;
-    background-color: #fff6ee;
+    @include flex-card(#fff6ee, row);
   }
 }
 
 /* Newsletter
  ========================================================================== */
 .newsletter {
-  background-color: #eafbf0;
+  @include button-card(#eafbf0, 3rem);
 
   input {
     width: 80%;
@@ -123,17 +103,11 @@ img {
 ========================================================================== */
 .advices {
   &__advice {
-    height: 100%;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 1.25rem;
-    background-color: #f4fbf5;
+    @include flex-card(#f4fbf5, column);
 
     img {
       max-height: 14rem;
-      margin-bottom: 1rem;
       @media screen and (max-width: 767px) {
-        width: 100%;
         max-height: 10rem;
       }
     }
@@ -148,7 +122,7 @@ img {
 ========================================================================== */
 .mentalDisorders {
   .horizontalCard {
-    background-color: #eaf9fb;
+    @include flex-card(#eaf9fb, row);
   }
 
   .col:nth-of-type(2n) .horizontalCard__image {
@@ -162,32 +136,30 @@ img {
 /* Helpful Contacts
 ========================================================================== */
 .getHelp {
-  font-size: 1.17rem;
-  background-color: #fbe9f3;
+  @include button-card(#fbe9f3, 3rem);
 
   h1 {
     font-size: 1.5rem;
     font-weight: 700;
   }
 
+  p {
+    font-size: 1.18rem;
+  }
+
   .button {
-    color: #fff;
-    background-color: #a13b6d;
+    @include color-button(#fff, #a13b6d);
+    font-size: 1.18rem;
   }
 }
 
 .contacts {
   &__contact {
-    height: 100%;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 1.25rem;
-    background-color: #e5e6f5;
+    @include button-card(#e5e6f5, 2rem);
 
     .button {
+      @include color-button(#fff, #8083ac);
       min-width: 6rem;
-      color: #fff;
-      background-color: #8083ac;
     }
   }
 }
