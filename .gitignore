@@ -1,6 +1,6 @@
 # Webstorm IDE folder
 .idea/
-# macOS folder
+# macOS files
 .DS_Store
 # npm folder
 node_modules/

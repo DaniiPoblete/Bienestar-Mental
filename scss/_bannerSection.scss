@@ -1,7 +1,11 @@
 /* Banner Section
  ========================================================================== */
 .bannerSection {
-  background-color: #fef7e6;
+  background-color: $banner-bg;
+
+  p {
+    text-align: justify;
+  }
 
   img {
     max-height: 25rem;
@@ -24,12 +28,12 @@
   }
 
   form {
-    @include flex(center, nowrap, normal, 0);
+    @include flex(0, null, null);
     max-width: 35rem;
     margin: 3rem auto;
     padding: 0 0.8rem;
-    border-radius: 1.25rem;
-    background-color: #fff;
+    border-radius: $border-radius;
+    background-color: $secondary-color;
     box-shadow: 5px 5px 15px 5px #00000014;
     @media screen and (max-width: 767px) {
       margin: 2rem auto;
@@ -38,37 +42,28 @@
     input {
       width: 100%;
       padding: 0.6rem 0.8rem;
-      border: none;
-      outline: none;
     }
 
     button {
-      cursor: pointer;
-      border: none;
       background-color: transparent;
     }
   }
 
   &__quickSearch {
-    @include flex(center, wrap, center, 1rem);
+    @include flex(1rem, wrap, center);
 
     p {
       margin-bottom: 0;
     }
 
     ul {
-      @include reset;
-      @include flex(center, wrap, center, 0.5rem);
-      list-style: none;
+      @include flex(0.5rem, wrap, center);
 
       li {
-        @include color-button(#fff, #e7b0af);
-        padding: 0.3rem 0.6rem;
-        border-radius: 1.25rem;
+        @include color-button(#fff, #e7b0af, 0.3rem 0.6rem);
 
         &:hover {
-          -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-          animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          @include button-animation;
         }
       }
     }

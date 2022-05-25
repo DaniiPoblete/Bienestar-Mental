@@ -1,3 +1,5 @@
+/* Map text tags
+ ========================================================================== */
 $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
 @each $key, $size, $weight in $sizes {
   #{$key} {
@@ -7,42 +9,80 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
   }
 }
 
-@mixin reset {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin flex($align-items, $flex-wrap, $justify-content, $gap) {
+/* Mixin Flex
+ ========================================================================== */
+@mixin flex($gap, $flex-wrap:null, $justify-content:null) {
   display: flex;
-  align-items: $align-items;
-  flex-wrap: $flex-wrap;
-  justify-content: $justify-content;
+  align-items: center;
+  @if (flex-wrap) {
+    flex-wrap: $flex-wrap;
+  }
+  @if ($justify-content) {
+    justify-content: $justify-content;
+  }
   gap: $gap;
 }
 
+/* Mixin Flex Card
+ ========================================================================== */
 @mixin flex-card($background-color, $flex-direction) {
-  @include flex(center, nowrap, normal, 2rem);
+  @include flex(2rem, null, null);
   flex-direction: $flex-direction;
   height: 100%;
   padding: 2rem;
   text-align: center;
-  border-radius: 1.25rem;
+  border-radius: $border-radius;
   background-color: $background-color;
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    align-items: stretch;
+  @if ($flex-direction == row) {
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 }
 
-@mixin button-card($background-color, $padding) {
+/* Mixin Card with button
+ ========================================================================== */
+@mixin button-card($background-color, $padding, $height:null) {
   text-align: center;
   padding: $padding;
-  border-radius: 1.25rem;
+  border-radius: $border-radius;
   background-color: $background-color;
-  height: 100%;
+  @if ($height) {
+    height: $height;
+  }
 }
 
-@mixin color-button($color, $background-color) {
+/* Mixin Buttons
+ ========================================================================== */
+@mixin color-button($color, $background-color, $padding:null) {
   color: $color;
   background-color: $background-color;
+  border-radius: $border-radius;
+  @if ($padding) {
+    padding: $padding;
+  } @else {
+    padding: $primary-padding;
+  }
+}
+
+/* Mixin Button Animation
+ ========================================================================== */
+@mixin button-animation {
+  -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Card Section
+ ========================================================================== */
+%cardSection {
+  max-width: 38rem;
+  margin: 2rem auto;
+  @media screen and (max-width: 991px) {
+    max-width: 36rem;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: unset;
+    margin: 1.5rem;
+  }
 }

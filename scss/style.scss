@@ -1,63 +1,28 @@
+@import "variables";
 @import "animations";
 @import "helpers";
+@import "reset";
 @import "header";
 @import "bannerSection";
-@import "cardSection";
 @import "horizontalCard";
 @import "footer";
 
-* {
-  @include reset;
-}
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: $primary-font;
   font-size: 1rem;
   line-height: normal;
-  color: #332c27;
+  color: $primary-color;
 }
 
-img {
-  max-width: 100%;
-}
-
-input,
-select,
-textarea,
-button {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-  color: unset;
-}
-
-.input,
-.button {
-  font-size: inherit;
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 1.25rem;
-  background-color: #fff;
+.input {
+  padding: $primary-padding;
+  border-radius: $border-radius;
+  background-color: $secondary-color;
 }
 
 .button {
   &:hover {
-    -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    @include button-animation;
   }
 
   i {
@@ -68,21 +33,37 @@ a:hover {
 /* Help
  ========================================================================== */
 .help {
-  @include button-card(#eaf9fb, 3rem);
+  @extend %cardSection;
+  @include button-card($help-bg, 3rem);
+
+  .button {
+    @include color-button($primary-color, $secondary-color);
+  }
 }
 
 /* Articles
  ========================================================================== */
 .articles {
   .horizontalCard {
-    @include flex-card(#fff6ee, row);
+    @include flex-card($articles-bg, row);
+
+    .button {
+      @include color-button($primary-color, $secondary-color);
+    }
   }
 }
 
 /* Newsletter
  ========================================================================== */
 .newsletter {
-  @include button-card(#eafbf0, 3rem);
+  @extend %cardSection;
+  @include button-card($newsletter-bg, 3rem);
+
+  label {
+    @media screen and (max-width: 767px) {
+      display: unset;
+    }
+  }
 
   input {
     width: 80%;
@@ -92,10 +73,8 @@ a:hover {
     }
   }
 
-  label {
-    @media screen and (max-width: 767px) {
-      display: unset;
-    }
+  .button {
+    @include color-button($primary-color, $secondary-color);
   }
 }
 
@@ -103,7 +82,7 @@ a:hover {
 ========================================================================== */
 .advices {
   &__advice {
-    @include flex-card(#f4fbf5, column);
+    @include flex-card($advices-bg, column);
 
     img {
       max-height: 14rem;
@@ -122,7 +101,7 @@ a:hover {
 ========================================================================== */
 .mentalDisorders {
   .horizontalCard {
-    @include flex-card(#eaf9fb, row);
+    @include flex-card($mentalDisorder-bg, row);
   }
 
   .col:nth-of-type(2n) .horizontalCard__image {
@@ -136,29 +115,29 @@ a:hover {
 /* Helpful Contacts
 ========================================================================== */
 .getHelp {
-  @include button-card(#fbe9f3, 3rem);
+  @extend %cardSection;
+  @include button-card($getHelp-bg, 3rem);
 
   h1 {
     font-size: 1.5rem;
     font-weight: 700;
   }
 
-  p {
+  p, .button {
     font-size: 1.18rem;
   }
 
   .button {
-    @include color-button(#fff, #a13b6d);
-    font-size: 1.18rem;
+    @include color-button($secondary-color, $getHelp-btn);
   }
 }
 
 .contacts {
   &__contact {
-    @include button-card(#e5e6f5, 2rem);
+    @include button-card($contacts-bg, 2rem, 100%);
 
     .button {
-      @include color-button(#fff, #8083ac);
+      @include color-button($secondary-color, $contacts-btn);
       min-width: 6rem;
     }
   }

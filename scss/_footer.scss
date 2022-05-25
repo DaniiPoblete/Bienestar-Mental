@@ -1,10 +1,9 @@
 /* Footer
  ========================================================================== */
 .footer {
-  @include flex(center, nowrap, space-between, 1rem);
+  @include flex(1rem, null, space-between);
   padding: 1rem 2rem;
-  text-align: center;
-  background-color: #efe6f5;
+  background-color: $footer-bg;
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
