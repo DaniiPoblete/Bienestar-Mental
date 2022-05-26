@@ -1,11 +1,12 @@
 /* Footer
  ========================================================================== */
 .footer {
-  @include flex(1rem, null, space-between);
+  @include flex(1rem, null, null, space-between);
   padding: 1rem 2rem;
   background-color: $footer-bg;
   @media screen and (max-width: 767px) {
     flex-direction: column;
+    text-align: center;
   }
 
   &__logo {

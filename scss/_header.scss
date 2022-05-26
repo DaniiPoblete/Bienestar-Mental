@@ -2,13 +2,13 @@
  ========================================================================== */
 header {
   padding: 0.5rem 1rem;
-  background-color: #fef7e6;
+  background-color: $banner-bg;
   @media screen and (max-width: 767px) {
     padding: 0.5rem 0;
   }
 
   .navbar-brand {
-    @include flex(1rem, null, null);
+    @include flex(1rem);
     font-size: 1.5rem;
     font-weight: 500;
     @media screen and (max-width: 767px) {
@@ -58,8 +58,10 @@ header {
     }
   }
 
-  .navbar-light .navbar-toggler {
-    border: none;
+  .navbar-light {
+    .navbar-toggler {
+      border: none;
+    }
   }
 
   .navbar-toggler:focus {

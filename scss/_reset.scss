@@ -11,6 +11,23 @@
   box-sizing: border-box;
 }
 
+input, button {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: none;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none; /*Safari/Chrome*/
+  -moz-appearance: none; /*Firefox*/
+  -ms-appearance: none; /*IE*/
+  -o-appearance: none; /*Opera*/
+  appearance: none;
+}
+
+input {
+  outline: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -23,15 +40,6 @@ a,
 a:hover {
   text-decoration: none;
   color: unset;
-}
-
-input {
-  border: none;
-  outline: none;
-}
-
-button {
-  border: none;
 }
 
 ul {

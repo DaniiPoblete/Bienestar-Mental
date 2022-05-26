@@ -4,13 +4,12 @@
 @import "reset";
 @import "header";
 @import "bannerSection";
-@import "horizontalCard";
 @import "footer";
 
 body {
   font-family: $primary-font;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.4;
   color: $primary-color;
 }
 
@@ -30,14 +29,15 @@ body {
   }
 }
 
-/* Help
+/* Horizontal Card
  ========================================================================== */
-.help {
-  @extend %cardSection;
-  @include button-card($help-bg, 3rem);
+.horizontalCard {
+  &__image {
+    flex: 1 1 40%;
+  }
 
-  .button {
-    @include color-button($primary-color, $secondary-color);
+  &__content {
+    flex: 1 1 60%;
   }
 }
 
@@ -50,6 +50,40 @@ body {
     .button {
       @include color-button($primary-color, $secondary-color);
     }
+  }
+}
+
+/* Mental Health
+========================================================================== */
+.mentalDisorders {
+  .horizontalCard {
+    @include flex-card($mentalDisorder-bg, row);
+  }
+
+  .col:nth-of-type(2n) .horizontalCard__image {
+    order: 1;
+    @media screen and (max-width: 767px) {
+      order: unset;
+    }
+  }
+}
+
+/* Healthy Life
+========================================================================== */
+.advices {
+  &__advice {
+    @include flex-card($advices-bg, column);
+  }
+}
+
+/* Help
+ ========================================================================== */
+.help {
+  @extend %cardSection;
+  @include button-card($help-bg, 3rem);
+
+  .button {
+    @include color-button($primary-color, $secondary-color);
   }
 }
 
@@ -75,40 +109,6 @@ body {
 
   .button {
     @include color-button($primary-color, $secondary-color);
-  }
-}
-
-/* Healthy Life
-========================================================================== */
-.advices {
-  &__advice {
-    @include flex-card($advices-bg, column);
-
-    img {
-      max-height: 14rem;
-      @media screen and (max-width: 767px) {
-        max-height: 10rem;
-      }
-    }
-
-    p {
-      text-align: justify;
-    }
-  }
-}
-
-/* Mental Health
-========================================================================== */
-.mentalDisorders {
-  .horizontalCard {
-    @include flex-card($mentalDisorder-bg, row);
-  }
-
-  .col:nth-of-type(2n) .horizontalCard__image {
-    order: 1;
-    @media screen and (max-width: 767px) {
-      order: unset;
-    }
   }
 }
 

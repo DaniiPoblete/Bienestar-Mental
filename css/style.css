@@ -81,6 +81,25 @@ p {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+input, button {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: none;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  /*Safari/Chrome*/
+  -moz-appearance: none;
+  /*Firefox*/
+  -ms-appearance: none;
+  /*IE*/
+  -o-appearance: none;
+  /*Opera*/
+  appearance: none; }
+
+input {
+  outline: none; }
+
 img {
   max-width: 100%; }
 
@@ -91,13 +110,6 @@ a,
 a:hover {
   text-decoration: none;
   color: unset; }
-
-input {
-  border: none;
-  outline: none; }
-
-button {
-  border: none; }
 
 ul {
   margin: 0;
@@ -161,8 +173,10 @@ header {
 /* Banner Section
  ========================================================================== */
 .bannerSection {
+  text-align: center;
   background-color: #fef7e6; }
   .bannerSection p {
+    margin-bottom: 0;
     text-align: justify; }
   .bannerSection img {
     max-height: 25rem; }
@@ -222,21 +236,6 @@ header {
         -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
-/* Horizontal Card
- ========================================================================== */
-.horizontalCard__image {
-  flex: 1 1 40%; }
-  .horizontalCard__image img {
-    max-height: 14rem; }
-    @media screen and (max-width: 767px) {
-      .horizontalCard__image img {
-        max-height: 10rem; } }
-
-.horizontalCard__content {
-  flex: 1 1 60%; }
-  .horizontalCard__content p {
-    text-align: justify; }
-
 /* Footer
  ========================================================================== */
 .footer {
@@ -248,7 +247,8 @@ header {
   background-color: #efe6f5; }
   @media screen and (max-width: 767px) {
     .footer {
-      flex-direction: column; } }
+      flex-direction: column;
+      text-align: center; } }
   .footer__logo img {
     width: 4rem; }
   .footer__copyright p {
@@ -260,7 +260,7 @@ header {
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.4;
   color: #332c27; }
 
 .input {
@@ -275,26 +275,21 @@ body {
 .button i {
   margin-right: 0.3rem; }
 
-/* Help
+/* Horizontal Card
  ========================================================================== */
-.help {
-  text-align: center;
-  padding: 3rem;
-  border-radius: 1.25rem;
-  background-color: #eaf9fb; }
-  .help .button {
-    color: #332c27;
-    background-color: #fff;
-    border-radius: 1.25rem;
-    padding: 0.4rem 0.8rem; }
+.horizontalCard__image {
+  flex: 1 1 40%; }
+
+.horizontalCard__content {
+  flex: 1 1 60%; }
 
 /* Articles
  ========================================================================== */
 .articles .horizontalCard {
   display: flex;
   align-items: center;
-  gap: 2rem;
   flex-direction: row;
+  gap: 2rem;
   height: 100%;
   padding: 2rem;
   text-align: center;
@@ -304,7 +299,77 @@ body {
     .articles .horizontalCard {
       flex-direction: column;
       align-items: stretch; } }
+  .articles .horizontalCard img {
+    max-height: 14rem; }
+    @media screen and (max-width: 767px) {
+      .articles .horizontalCard img {
+        max-height: 10rem; } }
+  .articles .horizontalCard p {
+    text-align: justify; }
   .articles .horizontalCard .button {
+    color: #332c27;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    padding: 0.4rem 0.8rem; }
+
+/* Mental Health
+========================================================================== */
+.mentalDisorders .horizontalCard {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  background-color: #eaf9fb; }
+  @media screen and (max-width: 767px) {
+    .mentalDisorders .horizontalCard {
+      flex-direction: column;
+      align-items: stretch; } }
+  .mentalDisorders .horizontalCard img {
+    max-height: 14rem; }
+    @media screen and (max-width: 767px) {
+      .mentalDisorders .horizontalCard img {
+        max-height: 10rem; } }
+  .mentalDisorders .horizontalCard p {
+    text-align: justify; }
+
+.mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
+  order: 1; }
+  @media screen and (max-width: 767px) {
+    .mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
+      order: unset; } }
+
+/* Healthy Life
+========================================================================== */
+.advices__advice {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  background-color: #f4fbf5; }
+  .advices__advice img {
+    max-height: 14rem; }
+    @media screen and (max-width: 767px) {
+      .advices__advice img {
+        max-height: 10rem; } }
+  .advices__advice p {
+    text-align: justify; }
+
+/* Help
+ ========================================================================== */
+.help {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background-color: #eaf9fb; }
+  .help .button {
     color: #332c27;
     background-color: #fff;
     border-radius: 1.25rem;
@@ -331,49 +396,6 @@ body {
     background-color: #fff;
     border-radius: 1.25rem;
     padding: 0.4rem 0.8rem; }
-
-/* Healthy Life
-========================================================================== */
-.advices__advice {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-direction: column;
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 1.25rem;
-  background-color: #f4fbf5; }
-  .advices__advice img {
-    max-height: 14rem; }
-    @media screen and (max-width: 767px) {
-      .advices__advice img {
-        max-height: 10rem; } }
-  .advices__advice p {
-    text-align: justify; }
-
-/* Mental Health
-========================================================================== */
-.mentalDisorders .horizontalCard {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-direction: row;
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 1.25rem;
-  background-color: #eaf9fb; }
-  @media screen and (max-width: 767px) {
-    .mentalDisorders .horizontalCard {
-      flex-direction: column;
-      align-items: stretch; } }
-
-.mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
-  order: 1; }
-  @media screen and (max-width: 767px) {
-    .mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
-      order: unset; } }
 
 /* Helpful Contacts
 ========================================================================== */

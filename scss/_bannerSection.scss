@@ -1,9 +1,11 @@
 /* Banner Section
  ========================================================================== */
 .bannerSection {
+  text-align: center;
   background-color: $banner-bg;
 
   p {
+    margin-bottom: 0;
     text-align: justify;
   }
 
@@ -28,13 +30,13 @@
   }
 
   form {
-    @include flex(0, null, null);
+    @include flex(0);
     max-width: 35rem;
     margin: 3rem auto;
     padding: 0 0.8rem;
     border-radius: $border-radius;
     background-color: $secondary-color;
-    box-shadow: 5px 5px 15px 5px #00000014;
+    box-shadow: $primary-shadow;
     @media screen and (max-width: 767px) {
       margin: 2rem auto;
     }
@@ -50,14 +52,14 @@
   }
 
   &__quickSearch {
-    @include flex(1rem, wrap, center);
+    @include flex(1rem, null, wrap, center);
 
     p {
       margin-bottom: 0;
     }
 
     ul {
-      @include flex(0.5rem, wrap, center);
+      @include flex(0.5rem, null, wrap, center);
 
       li {
         @include color-button(#fff, #e7b0af, 0.3rem 0.6rem);
