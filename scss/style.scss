@@ -1,144 +1,20 @@
-@import "variables";
-@import "animations";
-@import "helpers";
-@import "reset";
-@import "header";
-@import "bannerSection";
-@import "footer";
+@import "abstracts/variables";
+@import "abstracts/animations";
+@import "abstracts/helpers";
 
-body {
-  font-family: $primary-font;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: $primary-color;
-}
+@import "base/reset";
+@import "base/base";
 
-.input {
-  padding: $primary-padding;
-  border-radius: $border-radius;
-  background-color: $secondary-color;
-}
+@import "components/buttons";
+@import "components/inputs";
+@import "components/horizontalCard";
 
-.button {
-  &:hover {
-    @include button-animation;
-  }
+@import "layouts/header";
+@import "layouts/banner";
+@import "layouts/footer";
 
-  i {
-    margin-right: 0.3rem;
-  }
-}
-
-/* Horizontal Card
- ========================================================================== */
-.horizontalCard {
-  &__image {
-    flex: 1 1 40%;
-  }
-
-  &__content {
-    flex: 1 1 60%;
-  }
-}
-
-/* Articles
- ========================================================================== */
-.articles {
-  .horizontalCard {
-    @include flex-card($articles-bg, row);
-
-    .button {
-      @include color-button($primary-color, $secondary-color);
-    }
-  }
-}
-
-/* Mental Health
-========================================================================== */
-.mentalDisorders {
-  .horizontalCard {
-    @include flex-card($mentalDisorder-bg, row);
-  }
-
-  .col:nth-of-type(2n) .horizontalCard__image {
-    order: 1;
-    @media screen and (max-width: 767px) {
-      order: unset;
-    }
-  }
-}
-
-/* Healthy Life
-========================================================================== */
-.advices {
-  &__advice {
-    @include flex-card($advices-bg, column);
-  }
-}
-
-/* Help
- ========================================================================== */
-.help {
-  @extend %cardSection;
-  @include button-card($help-bg, 3rem);
-
-  .button {
-    @include color-button($primary-color, $secondary-color);
-  }
-}
-
-/* Newsletter
- ========================================================================== */
-.newsletter {
-  @extend %cardSection;
-  @include button-card($newsletter-bg, 3rem);
-
-  label {
-    @media screen and (max-width: 767px) {
-      display: unset;
-    }
-  }
-
-  input {
-    width: 80%;
-    margin-bottom: 1rem;
-    @media screen and (max-width: 767px) {
-      width: 100%;
-    }
-  }
-
-  .button {
-    @include color-button($primary-color, $secondary-color);
-  }
-}
-
-/* Helpful Contacts
-========================================================================== */
-.getHelp {
-  @extend %cardSection;
-  @include button-card($getHelp-bg, 3rem);
-
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  p, .button {
-    font-size: 1.18rem;
-  }
-
-  .button {
-    @include color-button($secondary-color, $getHelp-btn);
-  }
-}
-
-.contacts {
-  &__contact {
-    @include button-card($contacts-bg, 2rem, 100%);
-
-    .button {
-      @include color-button($secondary-color, $contacts-btn);
-      min-width: 6rem;
-    }
-  }
-}
+@import "pages/index";
+@import "pages/articles";
+@import "pages/healthyLife";
+@import "pages/mentalHealth";
+@import "pages/helpfulContacts";

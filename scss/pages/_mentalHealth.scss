@@ -1,0 +1,12 @@
+.mentalDisorders {
+  .horizontalCard {
+    @include flex-card($mentalDisorder-bg, row);
+  }
+
+  .col:nth-of-type(2n) .horizontalCard__image {
+    order: 1;
+    @media screen and (max-width: $sm-max-width) {
+      order: unset;
+    }
+  }
+}

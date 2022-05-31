@@ -36,14 +36,14 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
   border-radius: $border-radius;
   background-color: $background-color;
   @if ($flex-direction == row) {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $sm-max-width) {
       flex-direction: column;
       align-items: stretch;
     }
   }
   img {
     max-height: 14rem;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $sm-max-width) {
       max-height: 10rem;
     }
   }
@@ -89,10 +89,10 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
 %cardSection {
   max-width: 38rem;
   margin: 2rem auto;
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: $md-max-width) {
     max-width: 36rem;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $sm-max-width) {
     max-width: unset;
     margin: 1.5rem;
   }

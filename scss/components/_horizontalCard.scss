@@ -1,0 +1,9 @@
+.horizontalCard {
+  &__image {
+    flex: 1 1 40%;
+  }
+
+  &__content {
+    flex: 1 1 60%;
+  }
+}

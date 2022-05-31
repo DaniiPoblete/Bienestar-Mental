@@ -1,0 +1,9 @@
+.button {
+  &:hover {
+    @include button-animation;
+  }
+
+  i {
+    margin-right: 0.3rem;
+  }
+}

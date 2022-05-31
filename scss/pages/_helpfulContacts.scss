@@ -1,0 +1,28 @@
+.getHelp {
+  @extend %cardSection;
+  @include button-card($getHelp-bg, 3rem);
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  p, .button {
+    font-size: 1.18rem;
+  }
+
+  .button {
+    @include color-button($secondary-color, $getHelp-btn);
+  }
+}
+
+.contacts {
+  &__contact {
+    @include button-card($contacts-bg, 2rem, 100%);
+
+    .button {
+      @include color-button($secondary-color, $contacts-btn);
+      min-width: 6rem;
+    }
+  }
+}

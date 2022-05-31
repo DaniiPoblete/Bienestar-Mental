@@ -81,6 +81,15 @@ p {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #332c27; }
+
+img {
+  max-width: 100%; }
+
 input, button {
   font-family: inherit;
   font-weight: inherit;
@@ -100,9 +109,6 @@ input, button {
 input {
   outline: none; }
 
-img {
-  max-width: 100%; }
-
 a {
   display: inline-block; }
 
@@ -116,8 +122,24 @@ ul {
   padding: 0;
   list-style: none; }
 
-/* Header
- ========================================================================== */
+.button:hover {
+  -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.button i {
+  margin-right: 0.3rem; }
+
+.input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.25rem;
+  background-color: #fff; }
+
+.horizontalCard__image {
+  flex: 1 1 40%; }
+
+.horizontalCard__content {
+  flex: 1 1 60%; }
+
 header {
   padding: 0.5rem 1rem;
   background-color: #fef7e6; }
@@ -170,8 +192,6 @@ header {
   header .navbar-toggler:focus {
     box-shadow: none; }
 
-/* Banner Section
- ========================================================================== */
 .bannerSection {
   text-align: center;
   background-color: #fef7e6; }
@@ -184,8 +204,25 @@ header {
       .bannerSection img {
         max-height: 20rem; } }
 
-/* Search
- ========================================================================== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #efe6f5; }
+  @media screen and (max-width: 767px) {
+    .footer {
+      flex-direction: column;
+      text-align: center; } }
+  .footer__logo img {
+    width: 4rem; }
+  .footer__copyright p {
+    margin-bottom: 0; }
+  .footer__socialMedia i {
+    font-size: 2.5rem;
+    padding: 0.3rem; }
+
 .search h1 {
   font-size: 2.2rem;
   max-width: 35rem;
@@ -236,55 +273,37 @@ header {
         -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
-/* Footer
- ========================================================================== */
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 2rem;
-  background-color: #efe6f5; }
-  @media screen and (max-width: 767px) {
-    .footer {
-      flex-direction: column;
-      text-align: center; } }
-  .footer__logo img {
-    width: 4rem; }
-  .footer__copyright p {
-    margin-bottom: 0; }
-  .footer__socialMedia i {
-    font-size: 2.5rem;
-    padding: 0.3rem; }
-
-body {
-  font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #332c27; }
-
-.input {
-  padding: 0.4rem 0.8rem;
+.help {
+  text-align: center;
+  padding: 3rem;
   border-radius: 1.25rem;
-  background-color: #fff; }
+  background-color: #eaf9fb; }
+  .help .button {
+    color: #332c27;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    padding: 0.4rem 0.8rem; }
 
-.button:hover {
-  -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.newsletter {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background-color: #eafbf0; }
+  @media screen and (max-width: 767px) {
+    .newsletter label {
+      display: unset; } }
+  .newsletter input {
+    width: 80%;
+    margin-bottom: 1rem; }
+    @media screen and (max-width: 767px) {
+      .newsletter input {
+        width: 100%; } }
+  .newsletter .button {
+    color: #332c27;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    padding: 0.4rem 0.8rem; }
 
-.button i {
-  margin-right: 0.3rem; }
-
-/* Horizontal Card
- ========================================================================== */
-.horizontalCard__image {
-  flex: 1 1 40%; }
-
-.horizontalCard__content {
-  flex: 1 1 60%; }
-
-/* Articles
- ========================================================================== */
 .articles .horizontalCard {
   display: flex;
   align-items: center;
@@ -312,8 +331,24 @@ body {
     border-radius: 1.25rem;
     padding: 0.4rem 0.8rem; }
 
-/* Mental Health
-========================================================================== */
+.advices__advice {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  background-color: #f4fbf5; }
+  .advices__advice img {
+    max-height: 14rem; }
+    @media screen and (max-width: 767px) {
+      .advices__advice img {
+        max-height: 10rem; } }
+  .advices__advice p {
+    text-align: justify; }
+
 .mentalDisorders .horizontalCard {
   display: flex;
   align-items: center;
@@ -342,63 +377,6 @@ body {
     .mentalDisorders .col:nth-of-type(2n) .horizontalCard__image {
       order: unset; } }
 
-/* Healthy Life
-========================================================================== */
-.advices__advice {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 1.25rem;
-  background-color: #f4fbf5; }
-  .advices__advice img {
-    max-height: 14rem; }
-    @media screen and (max-width: 767px) {
-      .advices__advice img {
-        max-height: 10rem; } }
-  .advices__advice p {
-    text-align: justify; }
-
-/* Help
- ========================================================================== */
-.help {
-  text-align: center;
-  padding: 3rem;
-  border-radius: 1.25rem;
-  background-color: #eaf9fb; }
-  .help .button {
-    color: #332c27;
-    background-color: #fff;
-    border-radius: 1.25rem;
-    padding: 0.4rem 0.8rem; }
-
-/* Newsletter
- ========================================================================== */
-.newsletter {
-  text-align: center;
-  padding: 3rem;
-  border-radius: 1.25rem;
-  background-color: #eafbf0; }
-  @media screen and (max-width: 767px) {
-    .newsletter label {
-      display: unset; } }
-  .newsletter input {
-    width: 80%;
-    margin-bottom: 1rem; }
-    @media screen and (max-width: 767px) {
-      .newsletter input {
-        width: 100%; } }
-  .newsletter .button {
-    color: #332c27;
-    background-color: #fff;
-    border-radius: 1.25rem;
-    padding: 0.4rem 0.8rem; }
-
-/* Helpful Contacts
-========================================================================== */
 .getHelp {
   text-align: center;
   padding: 3rem;

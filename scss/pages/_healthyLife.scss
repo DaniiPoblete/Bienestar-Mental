@@ -1,0 +1,5 @@
+.advices {
+  &__advice {
+    @include flex-card($advices-bg, column);
+  }
+}

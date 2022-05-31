@@ -1,14 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: $primary-font;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: $primary-color;
 }
 
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+img {
+  max-width: 100%;
 }
 
 input, button {
@@ -26,10 +24,6 @@ input, button {
 
 input {
   outline: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 a {

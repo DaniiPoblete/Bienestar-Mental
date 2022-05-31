@@ -1,0 +1,9 @@
+.articles {
+  .horizontalCard {
+    @include flex-card($articles-bg, row);
+
+    .button {
+      @include color-button($primary-color, $secondary-color);
+    }
+  }
+}
