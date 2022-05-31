@@ -1,5 +1,5 @@
 .advices {
   &__advice {
-    @include flex-card($advices-bg, column);
+    @include image-card($advices-bg, "vertical");
   }
 }

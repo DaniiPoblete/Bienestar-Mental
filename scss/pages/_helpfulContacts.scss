@@ -1,6 +1,6 @@
 .getHelp {
   @extend %cardSection;
-  @include button-card($getHelp-bg, 3rem);
+  @include card($getHelp-bg, 3rem);
 
   h1 {
     font-size: 1.5rem;
@@ -18,7 +18,8 @@
 
 .contacts {
   &__contact {
-    @include button-card($contacts-bg, 2rem, 100%);
+    @include flex(0, column, null, center);
+    @include card($contacts-bg, 2rem, "full");
 
     .button {
       @include color-button($secondary-color, $contacts-btn);

@@ -1,9 +1,20 @@
 .articles {
-  .horizontalCard {
-    @include flex-card($articles-bg, row);
+  &__article {
+    @include flex(0);
+    @include image-card($articles-bg, "horizontal");
+
+    ul {
+      @include flex(0.2rem, null, null, end);
+
+      li {
+        @include color-button($secondary-color, $quickSearch-btn, 0.2rem 0.4rem);
+        font-size: 0.8rem;
+      }
+    }
 
     .button {
       @include color-button($primary-color, $secondary-color);
+      margin-top: 1rem;
     }
   }
 }

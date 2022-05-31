@@ -8,25 +8,27 @@
     }
   }
 
-  form {
-    @include flex(0);
-    max-width: 35rem;
-    margin: 3rem auto;
-    padding: 0 0.8rem;
-    border-radius: $border-radius;
-    background-color: $secondary-color;
-    box-shadow: $primary-shadow;
-    @media screen and (max-width: $sm-max-width) {
-      margin: 2rem auto;
-    }
+  &__mainSearch {
+    form {
+      @include flex(0);
+      max-width: 35rem;
+      margin: 3rem auto;
+      padding: 0 0.8rem;
+      border-radius: $border-radius;
+      background-color: $secondary-color;
+      box-shadow: $primary-shadow;
+      @media screen and (max-width: $sm-max-width) {
+        margin: 2rem auto;
+      }
 
-    input {
-      width: 100%;
-      padding: 0.6rem 0.8rem;
-    }
+      input {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+      }
 
-    button {
-      background-color: transparent;
+      button {
+        background-color: transparent;
+      }
     }
   }
 
@@ -37,11 +39,11 @@
       margin-bottom: 0;
     }
 
-    ul {
+    form {
       @include flex(0.5rem, null, wrap, center);
 
-      li {
-        @include color-button(#fff, #e7b0af, 0.3rem 0.6rem);
+      .button {
+        @include color-button($secondary-color, $quickSearch-btn, $secondary-padding);
 
         &:hover {
           @include button-animation;
@@ -53,7 +55,7 @@
 
 .help {
   @extend %cardSection;
-  @include button-card($help-bg, 3rem);
+  @include card($help-bg, 3rem);
 
   .button {
     @include color-button($primary-color, $secondary-color);
@@ -62,7 +64,7 @@
 
 .newsletter {
   @extend %cardSection;
-  @include button-card($newsletter-bg, 3rem);
+  @include card($newsletter-bg, 3rem);
 
   label {
     @media screen and (max-width: $sm-max-width) {

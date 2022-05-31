@@ -54,25 +54,27 @@
 	<main>
 		<section class="bannerSection search">
 			<div class="container-xl p-4">
-				<div class="row align-items-center g-4">
+				<div class="row g-4">
 					<div class="col-12 col-md-7">
 						<h1>Encuentra recursos digitales confiables sobre salud mental</h1>
-						<form action="" method="get">
-							<label for="index-search">
-								<i class="fa-solid fa-magnifying-glass"></i>
-							</label>
-							<input type="search" id="index-search" placeholder="Busca por síntomas, artículos...">
-							<button type="submit">Buscar</button>
-						</form>
+						<div class="search__mainSearch">
+							<form action="" method="get">
+								<label for="index-search">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</label>
+								<input type="search" id="index-search" placeholder="Busca por síntomas, artículos...">
+								<button type="submit">Buscar</button>
+							</form>
+						</div>
 						<div class="search__quickSearch">
 							<p>Búsqueda rápida:</p>
-							<ul>
-								<li><a href="#">Ansiedad</a></li>
-								<li><a href="#">Estrés</a></li>
-								<li><a href="#">TOC</a></li>
-								<li><a href="#">Depresión</a></li>
-								<li><a href="#">Insomnio</a></li>
-							</ul>
+							<form action="" method="get">
+								<button type="submit" value="anxiety" class="button">Ansiedad</button>
+								<button type="submit" value="stress" class="button">Estrés</button>
+								<button type="submit" value="ocd" class="button">TOC</button>
+								<button type="submit" value="depression" class="button">Depresión</button>
+								<button type="submit" value="insomnia" class="button">Insomnio</button>
+							</form>
 						</div>
 					</div>
 					<div class="col-12 col-md-5">
@@ -93,68 +95,107 @@
 			</div>
 			<div class="articles row row-cols-1 row-cols-lg-2 g-4">
 				<div class="col">
-					<div class="horizontalCard">
-						<div class="horizontalCard__image">
-							<img src="resources/articles/chore.svg" alt="Personas realizando tareas domésticas">
-						</div>
-						<div class="horizontalCard__content">
-							<h3>¿Pueden las tareas domésticas ayudarnos a aliviar el estrés?</h3>
-							<p>Actividades cotidianas como lavar platos, doblar la ropa y regar el jardín tendrían
-								efectos positivos cuando atravesamos momentos de angustia, dicen algunos estudios. Tres
-								psicólogos opinan al respecto, plantean sus reparos y entregan sus recomendaciones sobre
-								cómo sacarles provecho de manera apropiada.</p>
-							<a href="https://www.latercera.com/practico/noticia/pueden-las-tareas-domesticas-ayudarnos-a-aliviar-el-estres/CR5DYUAJINBMVFYMSDHTFH6IFU/"
-							   target="_blank" class="button">Seguir leyendo</a>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="horizontalCard">
-						<div class="horizontalCard__image">
-							<img src="resources/articles/adhd.svg" alt="Mujer con muchas emociones">
-						</div>
-						<div class="horizontalCard__content">
-							<h3>¿Problemas de concentración? Estas son las causas del déficit atencional (y algunas
-								soluciones)</h3>
-							<p>¿Te cuesta retener la información? ¿No logras enfocarte en una sola tarea? El TDA se va
-								extendiendo en la población y no atenderlo a tiempo puede acarrear mayores
-								consecuencias. Así lo dicen neurólogos y especialistas en ciencias cognitivas. Ponga
-								atención.</p>
-							<a href="https://www.latercera.com/practico/noticia/problemas-de-concentracion-estas-son-las-causas-del-deficit-atencional-y-algunas-soluciones/NYA6QHGOWZGWXH34HE5XPT5JJU/"
-							   target="_blank" class="button">Seguir leyendo</a>
+					<div class="articles__article">
+						<div class="row">
+							<div class="col-12 col-md-5">
+								<img src="resources/articles/chore.svg" alt="Personas realizando tareas domésticas">
+							</div>
+							<div class="col-12 col-md-7">
+								<h3>¿Pueden las tareas domésticas ayudarnos a aliviar el estrés?</h3>
+								<p>Actividades cotidianas como lavar platos, doblar la ropa y regar el jardín tendrían
+									efectos positivos cuando atravesamos momentos de angustia, dicen algunos estudios.
+									Tres
+									psicólogos opinan al respecto, plantean sus reparos y entregan sus recomendaciones
+									sobre
+									cómo sacarles provecho de manera apropiada.</p>
+								<ul>
+									<li>#Tag1</li>
+									<li>#Tag2</li>
+								</ul>
+							</div>
+							<div class="col">
+								<a href="https://www.latercera.com/practico/noticia/pueden-las-tareas-domesticas-ayudarnos-a-aliviar-el-estres/CR5DYUAJINBMVFYMSDHTFH6IFU/"
+								   target="_blank" class="button">Seguir leyendo</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col">
-					<div class="horizontalCard">
-						<div class="horizontalCard__image">
-							<img src="resources/articles/gym.svg" alt="Personas haciendo ejercicio en gimnasio">
-						</div>
-						<div class="horizontalCard__content">
-							<h3>¿Cuánto deporte es demasiado deporte? Cómo reconocer y enfrentar la adicción al
-								ejercicio</h3>
-							<p>Para la actividad física también corre ese dicho de que la diferencia entre medicina y
-								veneno está en la dosis. Una especialista explica las causas y las consecuencias del
-								exceso de entrenamiento, además de derribar el mito de que “el deporte es terapia”.</p>
-							<a href="https://www.latercera.com/practico/noticia/cuanto-deporte-es-demasiado-deporte-como-reconocer-y-enfrentar-la-adiccion-al-ejercicio/HI6IBIGTHNATHJVA36AXBDP6E4/"
-							   target="_blank" class="button">Seguir leyendo</a>
+					<div class="articles__article">
+						<div class="row">
+							<div class="col-12 col-md-5">
+								<img src="resources/articles/adhd.svg" alt="Mujer con muchas emociones">
+							</div>
+							<div class="col-12 col-md-7">
+								<h3>¿Problemas de concentración? Estas son las causas del déficit atencional (y algunas
+									soluciones)</h3>
+								<p>¿Te cuesta retener la información? ¿No logras enfocarte en una sola tarea? El TDA se
+									va
+									extendiendo en la población y no atenderlo a tiempo puede acarrear mayores
+									consecuencias. Así lo dicen neurólogos y especialistas en ciencias cognitivas. Ponga
+									atención.</p>
+								<ul>
+									<li>#Tag1</li>
+									<li>#Tag2</li>
+								</ul>
+							</div>
+							<div class="col">
+								<a href="https://www.latercera.com/practico/noticia/problemas-de-concentracion-estas-son-las-causas-del-deficit-atencional-y-algunas-soluciones/NYA6QHGOWZGWXH34HE5XPT5JJU/"
+								   target="_blank" class="button">Seguir leyendo</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col">
-					<div class="horizontalCard">
-						<div class="horizontalCard__image">
-							<img src="resources/articles/cage.svg" alt="Mujer saliendo de una jaula">
+					<div class="articles__article">
+						<div class="row">
+							<div class="col-12 col-md-5">
+								<img src="resources/articles/gym.svg" alt="Personas haciendo ejercicio en gimnasio">
+							</div>
+							<div class="col-12 col-md-7">
+								<h3>¿Cuánto deporte es demasiado deporte? Cómo reconocer y enfrentar la adicción al
+									ejercicio</h3>
+								<p>Para la actividad física también corre ese dicho de que la diferencia entre medicina
+									y
+									veneno está en la dosis. Una especialista explica las causas y las consecuencias del
+									exceso de entrenamiento, además de derribar el mito de que “el deporte es
+									terapia”.</p>
+								<ul>
+									<li>#Tag1</li>
+									<li>#Tag2</li>
+								</ul>
+							</div>
+							<div class="col">
+								<a href="https://www.latercera.com/practico/noticia/cuanto-deporte-es-demasiado-deporte-como-reconocer-y-enfrentar-la-adiccion-al-ejercicio/HI6IBIGTHNATHJVA36AXBDP6E4/"
+								   target="_blank" class="button">Seguir leyendo</a>
+							</div>
 						</div>
-						<div class="horizontalCard__content">
-							<h3>¿Miedo a salir de la casa? Qué es la agorafobia, un trastorno que creció con la
-								pandemia</h3>
-							<p>En Europa y Estados Unidos han aumentado las consultas por este problema, que se
-								manifiesta en una intensa ansiedad ante los espacios públicos y la gente desconocida. En
-								Chile no hay datos pero se espera un "tsunami de casos". Cuatro especialistas explican
-								por qué se produce y las maneras de enfrentarlo.</p>
-							<a href="https://www.latercera.com/practico/noticia/miedo-a-salir-de-la-casa-que-es-la-agorafobia-un-trastorno-que-crecio-con-la-pandemia/7LEOTA64EVHP5EBXSHZ46ACNXM/"
-							   target="_blank" class="button">Seguir leyendo</a>
+					</div>
+				</div>
+				<div class="col">
+					<div class="articles__article">
+						<div class="row">
+							<div class="col-12 col-md-5">
+								<img src="resources/articles/cage.svg" alt="Mujer saliendo de una jaula">
+							</div>
+							<div class="col-12 col-md-7">
+								<h3>¿Miedo a salir de la casa? Qué es la agorafobia, un trastorno que creció con la
+									pandemia</h3>
+								<p>En Europa y Estados Unidos han aumentado las consultas por este problema, que se
+									manifiesta en una intensa ansiedad ante los espacios públicos y la gente
+									desconocida. En
+									Chile no hay datos pero se espera un "tsunami de casos". Cuatro especialistas
+									explican
+									por qué se produce y las maneras de enfrentarlo.</p>
+								<ul>
+									<li>#Tag1</li>
+									<li>#Tag2</li>
+								</ul>
+							</div>
+							<div class="col">
+								<a href="https://www.latercera.com/practico/noticia/miedo-a-salir-de-la-casa-que-es-la-agorafobia-un-trastorno-que-crecio-con-la-pandemia/7LEOTA64EVHP5EBXSHZ46ACNXM/"
+								   target="_blank" class="button">Seguir leyendo</a>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,9 +1,9 @@
 .mentalDisorders {
-  .horizontalCard {
-    @include flex-card($mentalDisorder-bg, row);
+  &__disorder {
+    @include image-card($mentalDisorder-bg, "horizontal");
   }
 
-  .col:nth-of-type(2n) .horizontalCard__image {
+  .col:nth-of-type(2n) .col-12:first-of-type {
     order: 1;
     @media screen and (max-width: $sm-max-width) {
       order: unset;

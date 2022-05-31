@@ -26,41 +26,39 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
   gap: $gap;
 }
 
-/* Mixin Flex Card
+/* Mixin Basic Card
  ========================================================================== */
-@mixin flex-card($background-color, $flex-direction) {
-  @include flex(2rem, $flex-direction);
-  height: 100%;
-  padding: 2rem;
-  text-align: center;
-  border-radius: $border-radius;
-  background-color: $background-color;
-  @if ($flex-direction == row) {
-    @media screen and (max-width: $sm-max-width) {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  }
-  img {
-    max-height: 14rem;
-    @media screen and (max-width: $sm-max-width) {
-      max-height: 10rem;
-    }
-  }
-  p {
-    text-align: justify;
-  }
-}
-
-/* Mixin Card with button
- ========================================================================== */
-@mixin button-card($background-color, $padding, $height:null) {
+@mixin card($background-color, $padding, $height:null) {
   text-align: center;
   padding: $padding;
   border-radius: $border-radius;
   background-color: $background-color;
-  @if ($height) {
-    height: $height;
+  @if ($height == "full") {
+    height: 100%;
+  }
+}
+
+/* Mixin Card width image
+ ========================================================================== */
+@mixin image-card($background-color, $type:null) {
+  @include card($background-color, 2rem, "full");
+  .row {
+    align-items: center;
+  }
+  img {
+    max-height: 14rem;
+    @if ($type == "vertical") {
+      margin-bottom: 2rem;
+    }
+    @media screen and (max-width: $sm-max-width) {
+      max-height: 10rem;
+      @if ($type == "horizontal") {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  p {
+    text-align: justify;
   }
 }
 
