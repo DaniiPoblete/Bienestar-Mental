@@ -322,6 +322,7 @@ header {
   .articles__article ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: end;
     gap: 0.2rem; }
     .articles__article ul li {

@@ -4,7 +4,7 @@
     @include image-card($articles-bg, "horizontal");
 
     ul {
-      @include flex(0.2rem, null, null, end);
+      @include flex(0.2rem, null, wrap, end);
 
       li {
         @include color-button($secondary-color, $quickSearch-btn, 0.2rem 0.4rem);
