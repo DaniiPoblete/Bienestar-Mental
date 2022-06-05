@@ -59,14 +59,14 @@ p {
  ========================================================================== */
 /* Card Section
  ========================================================================== */
-.help, .newsletter, .getHelp {
+.help, .newsletter, .get-help {
   max-width: 38rem;
   margin: 2rem auto; }
   @media screen and (max-width: 991px) {
-    .help, .newsletter, .getHelp {
+    .help, .newsletter, .get-help {
       max-width: 36rem; } }
   @media screen and (max-width: 767px) {
-    .help, .newsletter, .getHelp {
+    .help, .newsletter, .get-help {
       max-width: unset;
       margin: 1.5rem; } }
 
@@ -186,18 +186,18 @@ header {
   header .navbar-toggler:focus {
     box-shadow: none; }
 
-.bannerSection {
+.banner {
   text-align: center;
   background-color: #fef7e6; }
-  .bannerSection .row {
+  .banner .row {
     align-items: center; }
-  .bannerSection p {
+  .banner p {
     margin-bottom: 0;
     text-align: justify; }
-  .bannerSection img {
+  .banner img {
     max-height: 25rem; }
     @media screen and (max-width: 767px) {
-      .bannerSection img {
+      .banner img {
         max-height: 20rem; } }
 
 .footer {
@@ -215,7 +215,7 @@ header {
     width: 4rem; }
   .footer__copyright p {
     margin-bottom: 0; }
-  .footer__socialMedia i {
+  .footer__social-media i {
     font-size: 2.5rem;
     padding: 0.3rem; }
 
@@ -227,7 +227,7 @@ header {
     .search h1 {
       font-size: 1.8rem; } }
 
-.search__mainSearch form {
+.search__main-search form {
   display: flex;
   align-items: center;
   gap: 0;
@@ -238,34 +238,34 @@ header {
   background-color: #fff;
   box-shadow: 5px 5px 15px 5px #00000014; }
   @media screen and (max-width: 767px) {
-    .search__mainSearch form {
+    .search__main-search form {
       margin: 2rem auto; } }
-  .search__mainSearch form input {
+  .search__main-search form input {
     width: 100%;
     padding: 0.6rem 0.8rem; }
-  .search__mainSearch form button {
+  .search__main-search form button {
     background-color: transparent; }
 
-.search__quickSearch {
+.search__quick-search {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem; }
-  .search__quickSearch p {
+  .search__quick-search p {
     margin-bottom: 0; }
-  .search__quickSearch form {
+  .search__quick-search form {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem; }
-    .search__quickSearch form .button {
+    .search__quick-search form .button {
       color: #fff;
       background-color: #e7b0af;
       border-radius: 1.25rem;
       padding: 0.3rem 0.6rem; }
-      .search__quickSearch form .button:hover {
+      .search__quick-search form .button:hover {
         -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation: shadow-drop-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
@@ -355,40 +355,40 @@ header {
   .advices__advice p {
     text-align: justify; }
 
-.mentalDisorders__disorder {
+.mental-disorders__disorder {
   text-align: center;
   padding: 2rem;
   border-radius: 1.25rem;
   background-color: #eaf9fb;
   height: 100%; }
-  .mentalDisorders__disorder .row {
+  .mental-disorders__disorder .row {
     align-items: center; }
-  .mentalDisorders__disorder img {
+  .mental-disorders__disorder img {
     max-height: 14rem; }
     @media screen and (max-width: 767px) {
-      .mentalDisorders__disorder img {
+      .mental-disorders__disorder img {
         max-height: 10rem;
         margin-bottom: 2rem; } }
-  .mentalDisorders__disorder p {
+  .mental-disorders__disorder p {
     text-align: justify; }
 
-.mentalDisorders .col:nth-of-type(2n) .col-12:first-of-type {
+.mental-disorders .col:nth-of-type(2n) .col-12:first-of-type {
   order: 1; }
   @media screen and (max-width: 767px) {
-    .mentalDisorders .col:nth-of-type(2n) .col-12:first-of-type {
+    .mental-disorders .col:nth-of-type(2n) .col-12:first-of-type {
       order: unset; } }
 
-.getHelp {
+.get-help {
   text-align: center;
   padding: 3rem;
   border-radius: 1.25rem;
   background-color: #fbe9f3; }
-  .getHelp h1 {
+  .get-help h1 {
     font-size: 1.5rem;
     font-weight: 700; }
-  .getHelp p, .getHelp .button {
+  .get-help p, .get-help .button {
     font-size: 1.18rem; }
-  .getHelp .button {
+  .get-help .button {
     color: #fff;
     background-color: #a13b6d;
     border-radius: 1.25rem;

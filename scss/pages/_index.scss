@@ -8,7 +8,7 @@
     }
   }
 
-  &__mainSearch {
+  &__main-search {
     form {
       @include flex(0);
       max-width: 35rem;
@@ -32,7 +32,7 @@
     }
   }
 
-  &__quickSearch {
+  &__quick-search {
     @include flex(1rem, null, wrap, center);
 
     p {
@@ -43,7 +43,7 @@
       @include flex(0.5rem, null, wrap, center);
 
       .button {
-        @include color-button($secondary-color, $quickSearch-btn, $secondary-padding);
+        @include color-button($secondary-color, $quick-search-btn, $secondary-padding);
 
         &:hover {
           @include button-animation;

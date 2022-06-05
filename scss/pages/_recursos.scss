@@ -7,7 +7,7 @@
       @include flex(0.2rem, null, wrap, end);
 
       li {
-        @include color-button($secondary-color, $quickSearch-btn, 0.2rem 0.4rem);
+        @include color-button($secondary-color, $quick-search-btn, 0.2rem 0.4rem);
         font-size: 0.8rem;
       }
     }

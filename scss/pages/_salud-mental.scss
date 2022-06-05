@@ -1,6 +1,6 @@
-.mentalDisorders {
+.mental-disorders {
   &__disorder {
-    @include image-card($mentalDisorder-bg, "horizontal");
+    @include image-card($mental-disorder-bg, "horizontal");
   }
 
   .col:nth-of-type(2n) .col-12:first-of-type {

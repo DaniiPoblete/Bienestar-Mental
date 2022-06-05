@@ -1,6 +1,6 @@
-.getHelp {
+.get-help {
   @extend %cardSection;
-  @include card($getHelp-bg, 3rem);
+  @include card($get-help-bg, 3rem);
 
   h1 {
     font-size: 1.5rem;
@@ -12,7 +12,7 @@
   }
 
   .button {
-    @include color-button($secondary-color, $getHelp-btn);
+    @include color-button($secondary-color, $get-help-btn);
   }
 }
 
