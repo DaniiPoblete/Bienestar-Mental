@@ -10,3 +10,32 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input, button {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: none;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none; /*Safari/Chrome*/
+  -moz-appearance: none; /*Firefox*/
+  -ms-appearance: none; /*IE*/
+  -o-appearance: none; /*Opera*/
+  appearance: none;
+}
+
+input {
+  outline: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: unset;
+}

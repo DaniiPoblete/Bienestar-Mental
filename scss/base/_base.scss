@@ -9,35 +9,12 @@ img {
   max-width: 100%;
 }
 
-input, button {
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  border: none;
-  -webkit-border-radius: 0;
-  -webkit-appearance: none; /*Safari/Chrome*/
-  -moz-appearance: none; /*Firefox*/
-  -ms-appearance: none; /*IE*/
-  -o-appearance: none; /*Opera*/
-  appearance: none;
-}
-
-input {
-  outline: none;
-}
-
 a {
   display: inline-block;
 }
 
-a,
-a:hover {
-  text-decoration: none;
-  color: unset;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+h1 {
+  @media screen and (max-width: $sm-max-width) {
+    font-size: 1.8rem;
+  }
 }

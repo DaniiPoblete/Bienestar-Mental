@@ -54,8 +54,7 @@
 }
 
 .help {
-  @extend %cardSection;
-  @include card($help-bg, 3rem);
+  @include card($help-bg);
 
   .button {
     @include color-button($primary-color, $secondary-color);
@@ -63,8 +62,7 @@
 }
 
 .newsletter {
-  @extend %cardSection;
-  @include card($newsletter-bg, 3rem);
+  @include card($newsletter-bg);
 
   label {
     @media screen and (max-width: $sm-max-width) {

@@ -1,10 +1,9 @@
 .get-help {
-  @extend %cardSection;
-  @include card($get-help-bg, 3rem);
+  @include card($get-help-bg);
 
   h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 600;
   }
 
   p, .button {

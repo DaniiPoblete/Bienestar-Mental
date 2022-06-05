@@ -1,11 +1,11 @@
 /* Map text tags
  ========================================================================== */
-$sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
-@each $key, $size, $weight in $sizes {
+$sizes: (h1 2.5rem 500 1.5rem, h2 1.5rem 600 1rem, h3 1.2rem 600 1rem, p 1rem 400 1rem);
+@each $key, $size, $weight, $margin-bottom in $sizes {
   #{$key} {
     font-size: $size;
     font-weight: $weight;
-    margin-bottom: 1rem;
+    margin-bottom: $margin-bottom;
   }
 }
 
@@ -28,14 +28,16 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
 
 /* Mixin Basic Card
  ========================================================================== */
-@mixin card($background-color, $padding, $height:null) {
-  text-align: center;
-  padding: $padding;
-  border-radius: $border-radius;
-  background-color: $background-color;
+@mixin card($background-color, $padding:null, $height:null) {
+  @if ($padding) {
+    padding: $padding;
+  }
   @if ($height == "full") {
     height: 100%;
   }
+  text-align: center;
+  border-radius: $border-radius;
+  background-color: $background-color;
 }
 
 /* Mixin Card width image
@@ -65,14 +67,14 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
 /* Mixin Buttons
  ========================================================================== */
 @mixin color-button($color, $background-color, $padding:null) {
-  color: $color;
-  background-color: $background-color;
-  border-radius: $border-radius;
   @if ($padding) {
     padding: $padding;
   } @else {
     padding: $primary-padding;
   }
+  color: $color;
+  background-color: $background-color;
+  border-radius: $border-radius;
 }
 
 /* Mixin Button Animation
@@ -80,18 +82,4 @@ $sizes: (h1 2.5rem 500, h2 1.5rem 600, h3 1.2rem 600, p 1rem 400);
 @mixin button-animation {
   -webkit-animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-/* Card Section
- ========================================================================== */
-%cardSection {
-  max-width: 38rem;
-  margin: 2rem auto;
-  @media screen and (max-width: $md-max-width) {
-    max-width: 36rem;
-  }
-  @media screen and (max-width: $sm-max-width) {
-    max-width: unset;
-    margin: 1.5rem;
-  }
 }
