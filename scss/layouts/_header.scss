@@ -5,23 +5,6 @@ header {
     padding: 0.5rem 0;
   }
 
-  .navbar-brand {
-    @include flex(1rem);
-    font-size: 1.5rem;
-    font-weight: 500;
-    @media screen and (max-width: $sm-max-width) {
-      font-size: 1.4rem;
-      gap: 0.5rem;
-    }
-
-    img {
-      width: 3rem;
-      @media screen and (max-width: $sm-max-width) {
-        width: 2.2rem;
-      }
-    }
-  }
-
   nav ul {
     gap: 0.5rem;
     @media screen and (max-width: $md-max-width) {
@@ -56,13 +39,40 @@ header {
     }
   }
 
-  .navbar-light {
-    .navbar-toggler {
-      border: none;
+  .navbar-brand {
+    @include flex(0.8rem);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    @media screen and (max-width: $sm-max-width) {
+      font-size: 1.4rem;
+      gap: 0.5rem;
+    }
+    @media screen and (max-width: $xxs-max-width) {
+      font-size: 0;
+    }
+
+    img {
+      width: 3.5rem;
+      @media screen and (max-width: $sm-max-width) {
+        width: 3.2rem;
+      }
+    }
+  }
+
+  .navbar-nav {
+    @media screen and (max-width: $md-max-width) {
+      padding: 0.5rem 1rem;
     }
   }
 
   .navbar-toggler:focus {
     box-shadow: none;
+  }
+
+  .navbar-light {
+    .navbar-toggler {
+      border: none;
+    }
   }
 }

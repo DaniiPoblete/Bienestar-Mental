@@ -3,10 +3,7 @@
     @include image-card($mental-disorder-bg, "horizontal");
   }
 
-  .col:nth-of-type(2n) .col-12:first-of-type {
-    order: 1;
-    @media screen and (max-width: $sm-max-width) {
-      order: unset;
-    }
+  .col:nth-of-type(even) .row {
+    flex-direction: row-reverse;
   }
 }

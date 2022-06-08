@@ -131,21 +131,6 @@ header {
   @media screen and (max-width: 767px) {
     header {
       padding: 0.5rem 0; } }
-  header .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
-    font-weight: 500; }
-    @media screen and (max-width: 767px) {
-      header .navbar-brand {
-        font-size: 1.4rem;
-        gap: 0.5rem; } }
-    header .navbar-brand img {
-      width: 3rem; }
-      @media screen and (max-width: 767px) {
-        header .navbar-brand img {
-          width: 2.2rem; } }
   header nav ul {
     gap: 0.5rem; }
     @media screen and (max-width: 991px) {
@@ -172,10 +157,32 @@ header {
         @media screen and (max-width: 991px) {
           header nav ul a:hover::before {
             opacity: 0; } }
-  header .navbar-light .navbar-toggler {
-    border: none; }
+  header .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -1px; }
+    @media screen and (max-width: 767px) {
+      header .navbar-brand {
+        font-size: 1.4rem;
+        gap: 0.5rem; } }
+    @media screen and (max-width: 331px) {
+      header .navbar-brand {
+        font-size: 0; } }
+    header .navbar-brand img {
+      width: 3.5rem; }
+      @media screen and (max-width: 767px) {
+        header .navbar-brand img {
+          width: 3.2rem; } }
+  @media screen and (max-width: 991px) {
+    header .navbar-nav {
+      padding: 0.5rem 1rem; } }
   header .navbar-toggler:focus {
     box-shadow: none; }
+  header .navbar-light .navbar-toggler {
+    border: none; }
 
 .banner {
   text-align: center;
@@ -219,7 +226,7 @@ header {
       flex-direction: column;
       text-align: center; } }
   .footer__logo img {
-    width: 4rem; }
+    width: 5rem; }
   .footer__copyright p {
     margin-bottom: 0; }
   .footer__social-media i {
@@ -377,11 +384,8 @@ header {
   .mental-disorders__disorder p {
     text-align: justify; }
 
-.mental-disorders .col:nth-of-type(2n) .col-12:first-of-type {
-  order: 1; }
-  @media screen and (max-width: 767px) {
-    .mental-disorders .col:nth-of-type(2n) .col-12:first-of-type {
-      order: unset; } }
+.mental-disorders .col:nth-of-type(even) .row {
+  flex-direction: row-reverse; }
 
 .get-help {
   text-align: center;
