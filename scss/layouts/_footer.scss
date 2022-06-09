@@ -1,28 +1,54 @@
 .footer {
-  @include flex(1rem, null, null, space-between);
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
   background-color: $footer-bg;
-  @media screen and (max-width: $sm-max-width) {
-    flex-direction: column;
-    text-align: center;
+
+  .row {
+    align-items: center;
   }
 
   &__logo {
+    text-align: left;
+    @media screen and (max-width: $md-max-width) {
+      text-align: center;
+    }
+
     img {
       width: 5rem;
     }
   }
 
-  &__copyright {
-    p {
-      margin-bottom: 0;
+  &__nav {
+    ul {
+      @include flex(2rem, null, null, center);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      @media screen and (max-width: $sm-max-width) {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   }
 
   &__social-media {
+    text-align: right;
+    @media screen and (max-width: $md-max-width) {
+      text-align: center;
+    }
+
     i {
-      font-size: 2.5rem;
+      font-size: 2rem;
       padding: 0.3rem;
+    }
+  }
+
+  &__copyright {
+    @media screen and (max-width: $md-max-width) {
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
     }
   }
 }

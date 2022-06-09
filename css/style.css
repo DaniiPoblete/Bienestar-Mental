@@ -215,23 +215,42 @@ header {
       padding: 2rem; } }
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
   background-color: #efe6f5; }
-  @media screen and (max-width: 767px) {
-    .footer {
-      flex-direction: column;
-      text-align: center; } }
-  .footer__logo img {
-    width: 5rem; }
+  .footer .row {
+    align-items: center; }
+  .footer__logo {
+    text-align: left; }
+    @media screen and (max-width: 991px) {
+      .footer__logo {
+        text-align: center; } }
+    .footer__logo img {
+      width: 5rem; }
+  .footer__nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+    @media screen and (max-width: 767px) {
+      .footer__nav ul {
+        flex-direction: column;
+        gap: 1rem; } }
+  .footer__social-media {
+    text-align: right; }
+    @media screen and (max-width: 991px) {
+      .footer__social-media {
+        text-align: center; } }
+    .footer__social-media i {
+      font-size: 2rem;
+      padding: 0.3rem; }
+  @media screen and (max-width: 991px) {
+    .footer__copyright {
+      margin-top: 1rem; } }
   .footer__copyright p {
-    margin-bottom: 0; }
-  .footer__social-media i {
-    font-size: 2.5rem;
-    padding: 0.3rem; }
+    font-size: 0.8rem; }
 
 .search h1 {
   font-size: 2.2rem;
