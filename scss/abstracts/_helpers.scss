@@ -48,12 +48,12 @@ $sizes: (h1 2.5rem 500 1.5rem, h2 1.5rem 600 1rem, h3 1.2rem 600 1rem, p 1rem 40
     align-items: center;
   }
   img {
-    max-height: 14rem;
+    height: 12rem;
     @if ($type == "vertical") {
       margin-bottom: 2rem;
     }
     @media screen and (max-width: $sm-max-width) {
-      max-height: 10rem;
+      height: 10rem;
       @if ($type == "horizontal") {
         margin-bottom: 2rem;
       }

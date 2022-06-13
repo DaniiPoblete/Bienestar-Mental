@@ -1,5 +1,14 @@
 .input {
+  margin-bottom: 1rem;
   padding: $primary-padding;
   border-radius: $border-radius;
   background-color: $secondary-color;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  color: $grey;
+  margin-bottom: 0.5rem;
 }

@@ -64,15 +64,16 @@
 .newsletter {
   @include card($newsletter-bg);
 
-  label {
+  .label {
+    width: 80%;
+    text-align: left;
     @media screen and (max-width: $sm-max-width) {
-      display: unset;
+      width: 100%;
     }
   }
 
-  input {
+  .input {
     width: 80%;
-    margin-bottom: 1rem;
     @media screen and (max-width: $sm-max-width) {
       width: 100%;
     }
